@@ -17,16 +17,16 @@ int validate_integer(char *str, unsigned int line_number);
 
 int validate_integer(char *str, unsigned int line_number)
 {
-	int n = 0;
+	int my_n = 0;
 
-	while (str[n] != '\0')
+	while (str[my_n] != '\0')
 	{
-		if (!(str[n] >= '0' && str[n] <= '9') && !(n == 0 && str[n] == '-'))
+		if (!(str[my_n] >= '0' && str[my_n] <= '9') && !(my_n == 0 && str[my_n] == '-'))
 		{
 			set_op_tok_error(no_int_error(line_number));
 			return (0);
 		}
-		n++;
+		my_n++;
 	}
 
 	return (1);
